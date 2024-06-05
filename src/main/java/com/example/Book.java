@@ -25,3 +25,44 @@ think about edge cases, such as setting negative values for the number of copies
 After implementing the class, test it with the example usage provided to ensure everything works correctly.
 * 
  */
+package com.example;
+ public class Book{
+    private String title;
+    private String author;
+    private  int copies;
+    private static int count=0;
+   
+    public Book(String title, String author, int copies) {
+        this.title = title;
+        this.author = author;
+        this.copies = copies;
+        count++;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getAuthor() {
+        return author;
+    }
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+    public  int getCopies() {
+        return copies;
+    }
+    public  void setCopies(int copies) {
+        this.copies = copies;
+    }
+    
+    public void displayBookDetails(){
+        System.out.println("Title of the Book: "+title);
+        System.out.println("Author of the Book: "+author);
+        System.out.println("No. of copies required: "+copies);
+    }
+    public static int getBookCount(){
+        return count;
+    }
+ }
